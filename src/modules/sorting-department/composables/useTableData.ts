@@ -25,7 +25,7 @@ export function useTableData({
       selected: false,
       email: faker.internet.email().toLocaleLowerCase(),
       potatoes: generateUniqueNumber(),
-      tags: [faker.word.adjective()],
+      tags: [faker.word.adjective(),faker.word.adjective()],
       fullname: faker.person.firstName(),
       location: faker.location.country(),
     };

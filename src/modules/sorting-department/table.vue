@@ -35,7 +35,7 @@ defineProps<{
                 </td>
                 <td class="td-potato-counts">{{ row.potatoes }}</td>
                 <td>
-                    <Badge variant="secondary" v-for="(tag, i) in row.tags" :key="i">{{ tag }}</Badge>
+                    <Badge class="mr-1" variant="secondary" v-for="(tag, i) in row.tags" :key="i">{{ tag }}</Badge>
                 </td>
                 <td>{{ row.fullname }}</td>
                 <td>{{ row.location }}</td>
