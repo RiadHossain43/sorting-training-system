@@ -16,7 +16,7 @@ interface IconProps {
 
 const props = defineProps<IconProps>();
 
-const iconPath = computed(() => `/src/assets/icons.svg#${props.name}`);
+const iconPath = computed(() => `./icons.svg#${props.name}`);
 </script>
 
 <style scoped>
