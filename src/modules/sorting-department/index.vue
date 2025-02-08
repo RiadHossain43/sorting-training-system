@@ -65,7 +65,7 @@ const stopSorting = () => {
                         v-model="configForm.people" />
                 </template>
                 <template #footer>
-                    <Button variant="secondary" @click="() => closeSetupModal()">Cancel</Button>
+                    <Button type="button" variant="secondary" @click="() => closeSetupModal()">Cancel</Button>
                     <Button type="submit" variant="primary">Generate</Button>
                 </template>
             </Modal>
