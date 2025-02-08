@@ -1,0 +1,65 @@
+@use "sass:color";
+@use "variables";
+
+.table-container {
+  margin: 20px 0;
+  background-color: variables.$white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  border: 1px solid variables.$stroke-color;
+}
+
+.psd-table {
+  width: 100%;
+  border-collapse: collapse;
+  position: relative;
+  border-top: 1px solid variables.$stroke-color;
+  border-bottom: 1px solid variables.$stroke-color;
+  margin-bottom: 30px;
+
+  tr {
+    transition: background 0.3s;
+  }
+
+  th,
+  td {
+    padding: 10px 16px;
+    text-align: left;
+    border-bottom: 1px solid variables.$stroke-color;
+    &.drag-handle {
+      cursor: grab;
+    }
+    min-width: 350px;
+  }
+
+  th :last-child,
+  td :last-child {
+    border-right: 0;
+  }
+  th:first-child,
+  td:first-child {
+    position: sticky;
+    left: 0;
+    background-color: variables.$white;
+    border-left: 0;
+    border-right: 1px solid variables.$stroke-color;
+    min-width: 400px !important;
+    height: 100%;
+    vertical-align: middle;
+    @media (max-width: 768px) {
+      min-width: 200px !important; // Restrict width on mobile
+      max-width: 200px !important;
+      overflow-x: scroll;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+  tr:hover {
+    background-color: variables.$secondary-color;
+  }
+
+  input[type="checkbox"] {
+    cursor: pointer;
+  }
+}

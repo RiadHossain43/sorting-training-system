@@ -1,0 +1,60 @@
+@use "sass:color";
+@use "variables";
+.psd-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.3s ease-in-out;
+  &.psd-modal--active {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &__content {
+    background: variables.$white;
+    border-radius: 8px;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin: 0 10px;
+
+  }
+
+  &__header {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    padding: 20px;
+    border-bottom: 1px solid variables.$stroke-color ;
+  }
+
+  &__body {
+    font-size: 14px;
+    margin-bottom: 20px;
+    padding: 20px;
+  }
+
+  &__footer {
+    text-align: right;
+    border-top: 1px solid variables.$stroke-color ;
+    padding: 20px;
+    .psd-btn {
+      padding: 8px 16px;
+      font-size: 14px;
+      cursor: pointer;
+
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
+    }
+  }
+}

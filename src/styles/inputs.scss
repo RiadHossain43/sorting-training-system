@@ -1,0 +1,91 @@
+@use "sass:color";
+@use "variables";
+.psd-input {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 14px;
+  color: variables.$text-dark-color;
+  background-color: variables.$white;
+  border: 1px solid variables.$stroke-color;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px variables.$shadow-medium;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 10px;
+  width: 100%;
+
+  &:focus {
+    border-color: variables.$primary-color;
+    box-shadow: 0 0 8px rgba(255, 141, 0, 0.3);
+    outline: none;
+  }
+
+  &.psd-input--error {
+    border-color: red;
+    box-shadow: 0 0 8px rgba(255, 0, 0, 0.3);
+  }
+
+  &.psd-input--disabled {
+    background-color: variables.$secondary-color;
+    border-color: variables.$stroke-color;
+    cursor: not-allowed;
+  }
+
+  &.psd-input--readonly {
+    background-color: variables.$secondary-color-light;
+    border-color: variables.$stroke-color;
+    cursor: not-allowed;
+  }
+}
+.psd-checkbox {
+  display: inline-block;
+  position: relative;
+  font-size: 14px;
+  color: variables.$text-medium-color;
+  cursor: pointer;
+  padding-left: 30px;
+
+  .psd-checkbox__input {
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .psd-checkbox__label {
+    display: inline-block;
+    padding-left: 10px;
+    font-size: 14px;
+    color: variables.$text-medium-color;
+  }
+
+  .psd-checkbox__input:checked + .psd-checkbox__label::before {
+    background-color: variables.$primary-color;
+    border-color: variables.$primary-color;
+  }
+
+  .psd-checkbox__label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 16px;
+    height: 16px;
+    border: 2px solid variables.$stroke-color;
+    border-radius: 6px;
+    background-color: variables.$white;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+  }
+
+  .psd-checkbox__input:checked + .psd-checkbox__label::after {
+    content: "\2713";
+    position: absolute;
+    left: 6px;
+    top: 3px;
+    font-size: 10px;
+    color: variables.$white;
+  }
+}

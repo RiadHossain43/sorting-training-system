@@ -1,0 +1,118 @@
+/* Base container style */
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px; /* Adding horizontal padding */
+  box-sizing: border-box; /* Ensures padding is included in width */
+}
+
+/* Mobile first (default for small screens) */
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px; /* Max width for small screens */
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px; /* Max width for medium screens */
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px; /* Max width for large screens */
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px; /* Max width for extra large screens */
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1280px; /* Max width for super large screens */
+  }
+}
+
+.d-flex {
+  display: flex;
+}
+.flex-column {
+  flex-direction: column;
+}
+.flex-row {
+  flex-direction: row;
+}
+.justify-content-center {
+  justify-content: center;
+}
+.justify-content-between {
+  justify-content: space-between;
+}
+.align-items-center {
+  align-items: center;
+}
+.pull-left {
+  float: left;
+}
+.pull-right {
+  float: right;
+}
+.d-inline-block {
+  display: inline-block;
+}
+@for $i from 1 through 10 {
+  .mt-#{$i} {
+    margin-top: #{$i * 0.25}rem;
+  }
+  .mb-#{$i} {
+    margin-bottom: #{$i * 0.25}rem;
+  }
+  .mr-#{$i} {
+    margin-right: #{$i * 0.25}rem;
+  }
+  .ml-#{$i} {
+    margin-left: #{$i * 0.25}rem;
+  }
+  .my-#{$i} {
+    margin-top: #{$i * 0.25}rem;
+    margin-bottom: #{$i * 0.25}rem;
+  }
+  .mx-#{$i} {
+    margin-right: #{$i * 0.25}rem;
+    margin-left: #{$i * 0.25}rem;
+  }
+  .pt-#{$i} {
+    padding-top: #{$i * 0.25}rem;
+  }
+  .pb-#{$i} {
+    padding-bottom: #{$i * 0.25}rem;
+  }
+  .pr-#{$i} {
+    padding-right: #{$i * 0.25}rem;
+  }
+  .pl-#{$i} {
+    padding-left: #{$i * 0.25}rem;
+  }
+  .py-#{$i} {
+    padding-top: #{$i * 0.25}rem;
+    padding-bottom: #{$i * 0.25}rem;
+  }
+  .px-#{$i} {
+    padding-right: #{$i * 0.25}rem;
+    padding-left: #{$i * 0.25}rem;
+  }
+}
+.scrollable-x {
+  max-width: 100%;
+  overflow-x: scroll;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+.cursor-grab {
+  cursor: grab;
+}

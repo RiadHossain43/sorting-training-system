@@ -1,0 +1,8 @@
+@use "sass:color";
+@use "variables";
+.psd-box {
+  padding: 20px;
+  background-color: variables.$white;
+  border-radius: 8px;
+  box-shadow: variables.$shadow-medium;
+}
