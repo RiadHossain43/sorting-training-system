@@ -1,0 +1,11 @@
+<!-- src/assets/icons.svg -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <!-- Define your SVG as a symbol -->
+  <symbol id="chevron-right" viewBox="0 0 8 12">
+    <path d="M1 11L6 6L1 1" stroke="#999999" stroke-width="2" />
+  </symbol>
+  <symbol id="cross" viewBox="0 0 24 24">
+    <path d="M6 6L18 18M18 6L6 18" stroke="#999999" stroke-width="2" />
+  </symbol>
+  <!-- Add more symbols here if needed -->
+</svg>
