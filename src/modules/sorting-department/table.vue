@@ -1,0 +1,45 @@
+<script setup lang="ts">
+import { type TableRow } from "@/types"
+import Badge from "@/components/ui/badge.vue"
+import Icon from "@/components/ui/icon.vue"
+import Checkbox from "@/components/ui/checkbox.vue";
+defineProps<{
+    data: TableRow[];
+    onRowDragStart: (index: number) => void;
+    onRowDropped: (index: number) => void;
+}>();
+</script>
+
+<template>
+    <table class="psd-table">
+        <thead>
+            <tr>
+                <th>Email</th>
+                <th>Potatoes</th>
+                <th>Tags</th>
+                <th>Full Name</th>
+                <th>Location</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr v-for="(row, index) in data" :key="index" draggable="true" @dragstart="onRowDragStart(index)"
+                @dragover.prevent @drop="onRowDropped(index)">
+                <td>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span>
+                            <span class="cursor-grab mr-2">⠿</span>
+                            <Checkbox v-model="row.selected" /> {{ row.email }}
+                        </span>
+                        <Icon name="chevron-right" size="12" class="cursor-pointer" />
+                    </div>
+                </td>
+                <td class="td-potato-counts">{{ row.potatoes }}</td>
+                <td>
+                    <Badge variant="secondary" v-for="(tag, i) in row.tags" :key="i">{{ tag }}</Badge>
+                </td>
+                <td>{{ row.fullname }}</td>
+                <td>{{ row.location }}</td>
+            </tr>
+        </tbody>
+    </table>
+</template>
