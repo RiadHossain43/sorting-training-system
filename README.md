@@ -8,52 +8,66 @@ This project is hosted on Vercel.
 ```sh
 .
 ├── README.md
+├── directory_structure.txt
 ├── index.html
 ├── package.json
-├── public/
-│   └── logo.svg
-├── src/
-│   ├── app.vue
-│   ├── assets/icons.svg
-│   ├── components/ui/
-│   │   ├── badge.vue
-│   │   ├── button.vue
-│   │   ├── checkbox.vue
-│   │   ├── icon.vue
-│   │   ├── input.vue
-│   │   └── modal.vue
-│   ├── lib/unique-number-generator.ts
-│   ├── main.ts
-│   ├── modules/sorting-department/
-│   │   ├── composables/
-│   │   │   ├── tests/
-│   │   │   │   ├── useModals.test.ts
-│   │   │   │   ├── useTableData.test.ts
-│   │   │   │   └── useTimer.test.ts
-│   │   │   ├── useModals.ts
-│   │   │   ├── useTableData.ts
-│   │   │   └── useTimer.ts
-│   │   ├── index.vue
-│   │   ├── table.vue
-│   │   ├── tests/
-│   │   │   ├── generate-rows.test.ts
-│   │   │   ├── helpers.ts
-│   │   │   ├── sort-rows.test.ts
-│   │   │   ├── sorting-system.test.ts
-│   │   │   └── timer.test.ts
-│   │   └── timer.vue
-│   ├── styles/
-│   │   ├── app.scss
-│   │   ├── components.scss
-│   │   ├── layout.scss
-│   │   ├── typography.scss
-│   │   └── variables.scss
-│   ├── types/
-│   │   ├── index.ts
-│   │   ├── table.ts
-│   │   └── timer-config.ts
-│   └── vite-env.d.ts
+├── public
+│   ├── icons.svg
+│   └── logo.svg
+├── src
+│   ├── app.vue
+│   ├── assets
+│   ├── components
+│   │   └── ui
+│   │       ├── badge.vue
+│   │       ├── button.vue
+│   │       ├── checkbox.vue
+│   │       ├── icon.vue
+│   │       ├── input.vue
+│   │       └── modal.vue
+│   ├── componsables
+│   │   └── useScrollWindow.ts
+│   ├── lib
+│   │   └── unique-number-generator.ts
+│   ├── main.ts
+│   ├── modules
+│   │   └── sorting-department
+│   │       ├── composables
+│   │       │   ├── tests
+│   │       │   │   ├── useModals.test.ts
+│   │       │   │   ├── useTableData.test.ts
+│   │       │   │   └── useTimer.test.ts
+│   │       │   ├── useModals.ts
+│   │       │   ├── useTableData.ts
+│   │       │   └── useTimer.ts
+│   │       ├── index.vue
+│   │       ├── table.vue
+│   │       ├── tests
+│   │       │   ├── generate-rows.test.ts
+│   │       │   ├── herpers.ts
+│   │       │   ├── sort-rows.test.ts
+│   │       │   ├── sorting-system.test.ts
+│   │       │   └── timer.test.ts
+│   │       └── timer.vue
+│   ├── styles
+│   │   ├── app.scss
+│   │   ├── badges.scss
+│   │   ├── box.scss
+│   │   ├── buttons.scss
+│   │   ├── inputs.scss
+│   │   ├── modals.scss
+│   │   ├── tables.scss
+│   │   ├── typography.scss
+│   │   ├── utils.scss
+│   │   └── variables.scss
+│   ├── types
+│   │   ├── index.ts
+│   │   ├── table.ts
+│   │   └── timer-config.ts
+│   └── vite-env.d.ts
+├── tsconfig.app.json
 ├── tsconfig.json
+├── tsconfig.node.json
 ├── vite.config.ts
 └── yarn.lock
 ```

@@ -3,7 +3,7 @@ import { type TableRow } from "@/types"
 import Badge from "@/components/ui/badge.vue"
 import Icon from "@/components/ui/icon.vue"
 import Checkbox from "@/components/ui/checkbox.vue";
-import { useScrollWindow } from "@/componsables/useScrollWindow";
+import { useScrollWindow } from "@/composables/useScrollWindow";
 defineProps<{
     data: TableRow[];
     onRowDragStart: (index: number) => void;
