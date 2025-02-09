@@ -50,8 +50,8 @@ const stopSorting = () => {
                     @click="resetTool">
                     Reset Tool
                 </Button>
-                <Button id="start-sort" :disabled="isTimerRunning" variant="primary"
-                    class="d-inline-block mb-3" @click="() => openSetupModal()">
+                <Button id="start-sort" :disabled="isTimerRunning" variant="primary" class="d-inline-block mb-3"
+                    @click="() => openSetupModal()">
                     Start Sorting
                 </Button>
             </div>
@@ -86,11 +86,8 @@ const stopSorting = () => {
                 <Timer :is-running="isTimerRunning" @timer-stopped="showScore" />
                 <h5>{{ getSelectedDataCounts() }} people selected in the list</h5>
             </div>
-
-            <div class="scrollable-x">
-                <Table v-bind:data="data" v-on:row-drag-start="onRowDragStart" v-on:row-dropped="(i) => reorderData(i)">
-                </Table>
-            </div>
+            <Table v-bind:data="data" v-on:row-drag-start="onRowDragStart" v-on:row-dropped="(i) => reorderData(i)">
+            </Table>
         </div>
     </div>
 </template>
