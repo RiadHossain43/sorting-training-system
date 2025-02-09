@@ -1,39 +1,37 @@
-/* Base container style */
 .container {
   width: 100%;
   margin: 0 auto;
-  padding: 0 15px; /* Adding horizontal padding */
-  box-sizing: border-box; /* Ensures padding is included in width */
+  padding: 0 15px;
+  box-sizing: border-box;
 }
 
-/* Mobile first (default for small screens) */
 @media (min-width: 576px) {
   .container {
-    max-width: 540px; /* Max width for small screens */
+    max-width: 540px;
   }
 }
 
 @media (min-width: 768px) {
   .container {
-    max-width: 720px; /* Max width for medium screens */
+    max-width: 720px;
   }
 }
 
 @media (min-width: 992px) {
   .container {
-    max-width: 960px; /* Max width for large screens */
+    max-width: 960px;
   }
 }
 
 @media (min-width: 1200px) {
   .container {
-    max-width: 1140px; /* Max width for extra large screens */
+    max-width: 1140px;
   }
 }
 
 @media (min-width: 1400px) {
   .container {
-    max-width: 1280px; /* Max width for super large screens */
+    max-width: 1280px;
   }
 }
 

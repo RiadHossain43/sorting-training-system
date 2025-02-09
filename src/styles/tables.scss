@@ -48,7 +48,7 @@
     height: 100%;
     vertical-align: middle;
     @media (max-width: 768px) {
-      min-width: 200px !important; // Restrict width on mobile
+      min-width: 200px !important;
       max-width: 200px !important;
       overflow-x: scroll;
       white-space: nowrap;
